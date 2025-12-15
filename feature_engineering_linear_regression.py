@@ -107,7 +107,7 @@ print(df.isnull().sum())
 # Handle missing values if any (forward fill method)
 if df.isnull().sum().sum() > 0:
     print("\n⚠ Missing values detected. Filling with forward fill method...")
-    df = df.fillna(method='ffill')
+    df = df.ffill()
     print("✓ Missing values handled")
 else:
     print("✓ No missing values found")
